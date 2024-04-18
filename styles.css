@@ -3,9 +3,11 @@ COLOR PALETTE
 Choose a color palette and paste the hex codes here to use below
 https://coolors.co/
 
+Keep these two:
 #343434 Dark color for fonts on a light background
 #F7FFF7 light color for fonts on a dark background
 
+Add your colors here...
 */
 
 
@@ -58,12 +60,26 @@ html {
   h3 {
     margin-bottom: 0;
   }
+
+  /* Next-sibling combinator
+  https://developer.mozilla.org/en-US/docs/Web/CSS/Next-sibling_combinator
+   separates two selectors and matches the second element only if it 
+   immediately follows the first element */
   .item-details h3 + p {
     font-style: italic;
   }
+
+  /* Subsequent-sibling combinator
+  https://developer.mozilla.org/en-US/docs/Web/CSS/Subsequent-sibling_combinator
+  Useful for all instances of the second element that follows the first. */
   .item-details h3 ~ p {
     margin: 0;
   }
+
+  /* Child combinator
+  https://developer.mozilla.org/en-US/docs/Web/CSS/Child_combinator
+  It matches only those elements matched by the second selector that are the 
+  direct children of elements matched by the first. */
   .divider > section {
     border-bottom: 1px dashed #343434;
     padding: 25px 0;
